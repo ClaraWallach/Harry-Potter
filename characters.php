@@ -56,7 +56,7 @@ for ($i = 0; $i < count($characters); $i++) {
 
 
     if ($characters[$i]['hogwartsStudent'] == true) {
-        echo '<li> Estudiante de Hogwarts </li>';
+        echo '<li> <p> Estudiante de Hogwarts </p> </li>';
     } else {
         if ($characters[$i]['hogwartsStaff'] == true) {
             echo '<li> Staff de Hogwarts </li>';
