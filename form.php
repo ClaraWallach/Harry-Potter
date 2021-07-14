@@ -13,8 +13,6 @@
     <main>
 
     <h1>Que personaje sos?</h1>
-
-    <p>Responde estas preguntas para averiguarlo</p>
     
     <form action="test.php" method="POST">
 

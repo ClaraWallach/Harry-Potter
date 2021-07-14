@@ -21,11 +21,17 @@
     
     <?php
 
-    include ('characters.php')
+    include_once ('characters.php')
 
     ?>
 
     </section>
+
+    <?php
+
+    include_once ('form.php')
+
+    ?>
 
 </main>
 
