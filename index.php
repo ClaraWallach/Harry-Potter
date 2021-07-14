@@ -19,12 +19,12 @@
             <ul id="menu">
                 </li>
                 <li class="menu-item">
-                    <a href="">
+                    <a href="#personajes">
                         <p>Personajes</p>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="">
+                    <a href="#formulario">
                         <p>Que personaje sos?</p>
                     </a>
                 </li>
@@ -32,9 +32,9 @@
         </nav>
     </header>
     <main>
-        <h2>Conoce a los personajes</h2>
 
-        <section>
+        <h2>Conoce a los personajes</h2>
+        <section id="personajes">
 
             <?php
 
@@ -44,11 +44,25 @@
 
         </section>
 
-        <?php
+        <h2>Que personaje sos?</h2>
+        <section id="formulario">
 
-                include_once('form.php')
 
-                ?>
+            <?php
+
+            include_once('form.php')
+
+            ?>
+
+        </section>
+
+        <section>
+            <?php
+
+            include('test.php')
+
+            ?>
+        </section>
 
     </main>
 

@@ -15,6 +15,7 @@ if ($apiresponse !== false) {
 echo ('<pre>');
 var_dump ($characters);   */
 
+
 for ($i = 0; $i < count($characters); $i++) {
 
     echo '<article id="' . $i . ' ", class=" ' .  $characters[$i]['house'] .  ' "> ';
