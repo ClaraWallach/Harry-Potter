@@ -194,9 +194,14 @@ label:last-child {
 
 }
 
+/* Pagina del resultado del test */
+
+#resultado_test article {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media (min-width: 1024px) {}
-
 
 
 

@@ -15,21 +15,11 @@
 
     <header>
         <h1> Bienvenido al mundo de Harry Potter </h1>
-        <nav>
-            <ul id="menu">
-                </li>
-                <li class="menu-item">
-                    <a href="#personajes">
-                        <p>Personajes</p>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#formulario">
-                        <p>Que personaje sos?</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
+        <?php 
+        require_once ('header.php')
+        ?>
+
     </header>
     <main>
 
@@ -56,13 +46,7 @@
 
         </section>
 
-        <section>
-            <?php
-
-            include('test.php')
-
-            ?>
-        </section>
+        
 
     </main>
 

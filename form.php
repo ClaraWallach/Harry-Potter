@@ -144,3 +144,11 @@
         <input type="submit" value="ENVIAR" id="enviar">
     </label>
 </form>
+
+<section>
+    <?php
+
+    include('test.php')
+
+    ?>
+</section>

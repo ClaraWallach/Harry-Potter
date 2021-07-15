@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo Harry Potter</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-<body>
 
+<html>
+<body id="resultado_test">
 
 
 <?php
@@ -69,7 +69,7 @@ function buscar_imprimir ($name, $array) {
     
     
         if ($array[$key]['hogwartsStudent'] == true) {
-            echo '<li> Estudiante de Hogwarts </li>';
+            echo '<li> <p> Estudiante de Hogwarts </p> </li>';
         } else {
             if ($array[$key]['hogwartsStaff'] == true) {
                 echo '<li> Staff de Hogwarts </li>';
@@ -90,7 +90,7 @@ function buscar_imprimir ($name, $array) {
     
 /* Procesando el formulario e imprimiendo la tarjeta del personaje */    
 
-/* var_dump($_POST); */
+/* Se crea un article adentro del article de la tarjeta y no entiendo porque */
 
 $resultado = array ();
 
@@ -105,7 +105,10 @@ if (!empty($_POST) ) {
            array_push($resultado, $valor);
         } 
     }
-/* var_dump(count($resultado)); */
+
+    require_once('header.php');
+    echo '<h2> Tu personaje es</h2>';
+
 
     if (  count($resultado) === 10 ) {
         if ( array_sum($resultado) >= 100 && array_sum ($resultado)<= 150 ) {
@@ -140,8 +143,6 @@ if (!empty($_POST) ) {
 }
 
 ?>
-
-
 
 </body>
 </html>
