@@ -5,15 +5,12 @@
 ini_set('display_errors', 1); */
 
 
+
 $apiresponse = file_get_contents('http://hp-api.herokuapp.com/api/characters');
 
 if ($apiresponse !== false) {
     $characters = json_decode($apiresponse, true);
 }
-
-/* 
-echo ('<pre>');
-var_dump ($characters);   */
 
 
 for ($i = 0; $i < count($characters); $i++) {
@@ -72,3 +69,5 @@ for ($i = 0; $i < count($characters); $i++) {
     echo '</article>';
 }
  
+
+

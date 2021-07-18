@@ -141,14 +141,7 @@
         </label>
     </label>
     <label>
-        <input type="submit" value="ENVIAR" id="enviar">
+        <a href="'test.php"><input type="submit" value="ENVIAR" id="enviar"></a>
     </label>
 </form>
 
-<section>
-    <?php
-
-    include('test.php')
-
-    ?>
-</section>
