@@ -11,13 +11,13 @@
 </head>
 
 <body>
-
-
     <header>
         <h1> Bienvenido al mundo de Harry Potter </h1>
 
         <?php 
+
         require_once ('header.php')
+        
         ?>
 
     </header>
@@ -45,12 +45,7 @@
             ?>
 
         </section>
-
-        
-
     </main>
-
-
 </body>
 
 </html>

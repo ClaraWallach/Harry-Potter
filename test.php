@@ -13,77 +13,75 @@
 
 <body id="resultado_test">
 
-
     <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+    require_once('functions.php');
 
-require_once('functions.php');
+    $resultado = array();
 
+    if (!empty($_POST)) {
 
+        foreach ($_POST as $respuesta => $valor) {
 
-$resultado = array();
-
-if ( !empty( $_POST ) ) {
-
-    foreach ( $_POST as $respuesta => $valor ) {
-        
-        if (
-            !empty($valor) &&
-            $valor == '10' ||
-            $valor === '20' ||
-            $valor === '30' ||
-            $valor === '40'
-        ) {
-            array_push($resultado, $valor);
-        
+            if (
+                !empty($valor) &&
+                $valor == '10' ||
+                $valor === '20' ||
+                $valor === '30' ||
+                $valor === '40'
+            ) {
+                array_push($resultado, $valor);
             }
-    }
+        }
 
-    require_once('header.php');
-    echo '<h2> Tu personaje es</h2>';
+        require_once('header.php');
+        echo '<h2> Tu personaje es</h2>';
 
 
-    if ( count( $resultado ) === 10 ) {
+        if (count($resultado) === 10) {
 
-    if ( array_sum( $resultado) >= 100 && array_sum( $resultado ) <= 150 ) {
-       imprimir_por_nombre( $characters,'Minerva McGonagall' );  
-       
-    }   elseif ( array_sum( $resultado ) < 150 && array_sum( $resultado ) <= 200 ) {
-           imprimir_por_nombre( $characters, 'Hermione Granger' );
-       
-        } elseif ( array_sum( $resultado ) < 200 && array_sum( $resultado ) <= 250 ) {
-            imprimir_por_nombre( $characters, 'Ron Weasley' );
-        
-        } elseif ( array_sum( $resultado ) < 250 && array_sum( $resultado ) <= 300 ) {
-            imprimir_por_nombre( $characters, 'Harry Potter' );
-        
-        } elseif ( array_sum( $resultado ) < 300 && array_sum( $resultado ) <= 350 ) {
-            imprimir_por_nombre($characters, 'Severus Snape' );
-        
-        } elseif ( array_sum( $resultado ) < 350 && array_sum( $resultado ) <= 400 ) {
-            imprimir_por_nombre( $characters, 'Draco Malfoy' );
-        
+            if (array_sum($resultado) >= 100 && array_sum($resultado) <= 150) {
+                imprimir_por_nombre($characters, 'Minerva McGonagall');
+                echo '<article> <a href="index.php">Volver al inicio </a> </article>';
+
+            } elseif (array_sum($resultado) < 150 && array_sum($resultado) <= 200) {
+                imprimir_por_nombre($characters, 'Hermione Granger');
+                echo '<article> <a href="index.php">Volver al inicio </a> </article>';
+
+            } elseif (array_sum($resultado) < 200 && array_sum($resultado) <= 250) {
+                imprimir_por_nombre($characters, 'Ron Weasley');
+                
+            } elseif (array_sum($resultado) < 250 && array_sum($resultado) <= 300) {
+                imprimir_por_nombre($characters, 'Harry Potter');
+                echo '<article> <a href="index.php">Volver al inicio </a> </article>';
+
+            } elseif (array_sum($resultado) < 300 && array_sum($resultado) <= 350) {
+                imprimir_por_nombre($characters, 'Severus Snape');
+                echo '<article> <a href="index.php">Volver al inicio </a> </article>';
+
+            } elseif (array_sum($resultado) < 350 && array_sum($resultado) <= 400) {
+                imprimir_por_nombre($characters, 'Draco Malfoy');
+                echo '<article> <a href="index.php">Volver al inicio </a> </article>';
+
+            } else {
+                require_once('header.php');
+                echo '<article> <p> algo salio mal </p> </article>';
+                echo '<article> <a href="index.php">Volver al inicio </a> </article>';
+            }
+
         } else {
             require_once('header.php');
             echo '<article> <p> algo salio mal </p> </article>';
             echo '<article> <a href="index.php">Volver al inicio </a> </article>';
         }
-    
+        
     } else {
         require_once('header.php');
         echo '<article> <p> algo salio mal </p> </article>';
         echo '<article> <a href="index.php">Volver al inicio </a> </article>';
     }
 
-}  else {
-    require_once('header.php');
-    echo '<article> <p> algo salio mal </p> </article>';
-    echo '<article> <a href="index.php">Volver al inicio </a> </article>';
-} 
-
-?>
+    ?>
 
 </body>
 
